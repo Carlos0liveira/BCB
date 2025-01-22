@@ -14,8 +14,8 @@ Certifique-se de ter instalado:
 ### **2. Passos para Subir o Projeto**
 1. Clone o repositório:
 ```bash
-git clone https://github.com/seu-usuario/big-chat-brasil.git
-cd big-chat-brasil
+git clone https://github.com/Carlos0liveira/BCB.git
+cd bcb
 ```
 2. Construa e execute os containers:
 ```bash
@@ -32,7 +32,7 @@ docker-compose up --build
 ```
 /big-chat-brasil
 ├── backend/                # Código do backend (Spring Boot)
-├── frontend/               # Código do frontend (React)
+├── frontend/               # Código do frontend (Next.js)
 ├── docker-compose.yml      # Orquestração dos containers
 └── README.md               # Este arquivo
 ```
