@@ -32,8 +32,8 @@ export function LoginForm() {
             } else {
                 setError("Credenciais inválidas")
             }
-        } catch (err) {
-            setError("Erro ao fazer login. Tente novamente.")
+        } catch (error) {
+            setError(`Erro ao fazer login. Tente novamente., ${error}`,)
         }
     }
 
