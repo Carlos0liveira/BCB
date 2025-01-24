@@ -9,7 +9,7 @@ import com.irrah.bcb.utils.CrudResource;
 import io.swagger.v3.oas.annotations.tags.Tag;
 
 @RestController
-@RequestMapping("/users")
-@Tag(name = "Usuários", description = "Operações relacionadas a usuários")
-public class UserResource extends CrudResource<User, Long> {
+@RequestMapping("/pessoas")
+@Tag(name = "Pessoas", description = "Operações relacionadas a pessoas")
+public class PessoaResource extends CrudResource<User, Long> {
 }

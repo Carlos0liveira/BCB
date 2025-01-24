@@ -1,0 +1,36 @@
+
+<?xml version="1.0" encoding="utf-8" ?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+    <changeSet id="23012025-2300-create-table-pessoa" author="carlos">
+        <preConditions onFail="MARK_RAN" onFailMessage="Tabela pessoa já existe">
+            <not>
+                <tableExists tableName="pessoa"/>
+            </not>
+        </preConditions>
+        <createTable tableName="pessoa">
+            <column name="id" type="BIGINT" autoIncrement="true">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="nome" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="email" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="telefone" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="cpf_responsavel" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="cnpj_empresa" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="nome_empresa" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+</databaseChangeLog>

@@ -23,4 +23,19 @@
             </column>
         </createTable>
     </changeSet>
+
+    <changeSet id="add-default-user" author="carlos">
+        <preConditions onFail="MARK_RAN" onFailMessage="Usuário padrão já existe">
+            <not>
+                <sqlCheck expectedResult="0">SELECT COUNT(*) FROM users WHERE name = 'admin'</sqlCheck>
+            </not>
+        </preConditions>
+        <insert tableName="users">
+            <column name="id" valueNumeric="1"/>
+            <column name="name" value="admin"/>
+            <column name="email" value="admin@email.com" />
+            <column name="password" value="$2a$10$7Q8x9XLsKP5W0TjtK9c8Re7XpxM0KHha0uW/7JhNGCqZqzHG9f4eG"/>
+        </insert>
+    </changeSet>
+
 </databaseChangeLog>
