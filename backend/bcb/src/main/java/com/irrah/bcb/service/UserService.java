@@ -20,7 +20,7 @@ public class UserService extends CrudService<User, Long> {
     private final PasswordEncoder passwordEncoder;
 
     public boolean authenticate(AuthRequest request) {
-        User user = userRepository.findByEmail(request.getUsername()).orElseThrow( () -> new ValidationException("Usuário não encontrado"));
+        User user = userRepository.findByEmail(request.getEmail()).orElseThrow( () -> new ValidationException("Usuário não encontrado"));
 
         return passwordEncoder.matches(request.getPassword(), user.getPassword());
     }

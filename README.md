@@ -23,6 +23,9 @@ docker-compose up --build
 ```
 3. Acesse os serviços:
 - **Frontend:** `http://localhost:3000`
+ -- Realizar login com o usuário padrão 
+ --- Email: admin@email.com
+ --- Senha: admin
 - **Backend:** `http://localhost:8080`
 
 ---

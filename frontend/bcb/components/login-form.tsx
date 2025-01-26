@@ -19,15 +19,15 @@ export function LoginForm() {
         setError("")
 
         try {
-            const response = await fetch("/api/login", {
+            const response = await fetch("http://localhost:8080/auth/login", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ email, password }),
             })
 
             if (response.ok) {
-                const { token } = await response.json()
-                setCookie("auth_token", token, { maxAge: 30 * 24 * 60 * 60 }) // 30 days
+                const  token  = await response.text()
+                setCookie("auth_token", token, { maxAge: 30 * 24 * 60 * 60 })
                 router.push("/dashboard")
             } else {
                 setError("Credenciais inválidas")

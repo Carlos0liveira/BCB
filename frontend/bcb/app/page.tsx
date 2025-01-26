@@ -11,11 +11,6 @@ export default function Page() {
           BCB oferece soluções de mensagens eficientes e elegantes para sua empresa.
         </p>
         <div className="flex flex-col sm:flex-row gap-4">
-          <Link href="/cadastro">
-            <Button size="lg" className="w-full sm:w-auto">
-              Cadastrar-se
-            </Button>
-          </Link>
           <Link href="/dashboard">
             <Button size="lg" variant="outline" className="w-full sm:w-auto">
               Acessar Painel

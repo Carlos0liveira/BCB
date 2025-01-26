@@ -6,7 +6,7 @@ export function middleware(request: NextRequest) {
 
     if (
         !token &&
-        (request.nextUrl.pathname.startsWith("/dashboard") || request.nextUrl.pathname.startsWith("/backoffice"))
+        (request.nextUrl.pathname.startsWith("/dashboard") || request.nextUrl.pathname.startsWith("/backoffice") || request.nextUrl.pathname.startsWith("/cadastro"))
     ) {
         return NextResponse.redirect(new URL("/login", request.url))
     }
@@ -15,5 +15,5 @@ export function middleware(request: NextRequest) {
 }
 
 export const config = {
-    matcher: ["/dashboard/:path*", "/backoffice/:path*"],
+    matcher: ["/dashboard/:path*", "/backoffice/:path*", "/cadastro/:path*"]
 }
